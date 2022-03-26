@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <i class="bi bi-check-circle-fill center" id="checkIcon"></i>
+    <strong class="center" style="font-size: 22px;">Your payment was successful</strong>
+    <p class="center">Thank you for your payment</p>
+    <hr>
+    <a href="{% url 'orders' %}">See your orders</a>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td>STATUS</td>
+                <td>:</td>
+                <td>{{STATUS}}</td>
+            </tr>
+            <tr>
+                <td>TXNDATE</td>
+                <td>:</td>
+                <td>{{TXNDATE}}</td>
+            </tr>
+            <tr>
+                <td>TXNAMOUNT</td>
+                <td>:</td>
+                <td>{{TXNAMOUNT}}</td>
+            </tr>
+            <tr>
+                <td>CURRENCY</td>
+                <td>:</td>
+                <td>{{CURRENCY}}</td>
+            </tr>
+            <tr>
+                <td>TXNID</td>
+                <td>:</td>
+                <td>{{TXNID}}</td>
+            </tr>
+            <tr>
+                <td>ORDERID</td>
+                <td>:</td>
+                <td>{{ORDERID}}</td>
+            </tr>
+            <tr>
+                <td>BANKNAME</td>
+                <td>:</td>
+                <td>{{BANKNAME}}</td>
+            </tr>
+            <tr>
+                <td>BANKTXNID</td>
+                <td>:</td>
+                <td>{{BANKTXNID}}</td>
+            </tr>
+            <tr>
+                <td>PAYMENTMODE</td>
+                <td>:</td>
+                <td>{{PAYMENTMODE}}</td>
+            </tr>
+            <tr>
+                <td>GATEWAYNAME</td>
+                <td>:</td>
+                <td>{{GATEWAYNAME}}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% include 'app/orders.html' %}
+</body>
+<style>
+    .center{
+        display: block;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    #checkIcon{
+        font-size: 100px; color: #0da70d;
+    }
+    table{
+        width: 50%;
+        border-collapse: collapse;
+    }
+    tbody{
+        border: .5px solid gray;
+        background-color: #eee;
+    }
+    td{
+        padding: 3px;
+    }
+</style>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Password Change Done{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <h3>{{request.user.username}}</h3>
+        <div class="col-sm-2 border-end">
+            
+        </div>
+        <div class="col-sm-9 offset-sm-1 text-center">
+            <h3>Password Changed Successfully</h3>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

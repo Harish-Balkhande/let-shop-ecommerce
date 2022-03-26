@@ -1,0 +1,41 @@
+<html>
+
+<head>
+   <title>Show Payment Page</title>
+</head>
+
+<body>
+   <div id="center">
+      <center>
+         <h1>Please do not refresh this page</h1>
+         <p>Redirecting to marchant...</p>
+         <form method="post"
+            action="https://securegw-stage.paytm.in/theia/api/v1/showPaymentPage?mid={{data.mid}}&orderId={{data.order_id}}"
+            name="paytm">
+            <table border="1">
+               <tbody>
+                  {% for key,value in data.items %}
+                  <input type="hidden" name={{key}} value={{value}}>
+                  {% endfor %}
+               </tbody>
+            </table>
+            <script type="text/javascript"> document.paytm.submit(); </script>
+         </form>
+      </center>
+   </div>
+</body>
+<style>
+   #center {
+      display: block;
+      width: 90%;
+      margin: auto;
+      margin-top: 30vh;
+   }
+
+   h1,
+   p {
+      margin: 0;
+   }
+</style>
+
+</html>

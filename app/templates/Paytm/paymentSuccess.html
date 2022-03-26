@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Processing...</h1>
+
+    <form action="{% url 'paymentdone' %}" method="post" name="transection">
+        {% csrf_token %}
+        <input type="hidden" name="STATUS" value="{{STATUS}}">
+        <input type="hidden" name="TXNDATE" value="{{TXNDATE}}">
+        <input type="hidden" name="TXNAMOUNT" value="{{TXNAMOUNT}}">
+        <input type="hidden" name="CURRENCY" value="{{CURRENCY}}">
+        <input type="hidden" name="TXNID" value="{{TXNID}}">
+        <input type="hidden" name="ORDERID" value="{{ORDERID}}">
+        <input type="hidden" name="BANKNAME" value="{{BANKNAME}}">
+        <input type="hidden" name="BANKTXNID" value="{{BANKTXNID}}">
+        <input type="hidden" name="PAYMENTMODE" value="{{PAYMENTMODE}}">
+        <input type="hidden" name="GATEWAYNAME" value="{{GATEWAYNAME}}">
+
+        <script type="text/javascript"> document.transection.submit(); </script>
+    </form>
+</body>
+
+</html>
