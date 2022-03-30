@@ -1,0 +1,16 @@
+asgiref==3.5.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
+Django==3.2.12
+idna==3.3
+paytmchecksum==1.7.0
+Pillow==9.0.1
+pycryptodome==3.14.1
+pytz==2021.3
+requests==2.27.1
+shellescape==3.8.1
+sqlparse==0.4.2
+typing_extensions==4.1.1
+urllib3==1.26.8
+waitress==2.1.1
+whitenoise==6.0.0

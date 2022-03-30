@@ -1,0 +1,40 @@
+/* Banner slider */
+.banner-img{
+  height: 350px;
+}
+
+/* Slider css */
+.owl-carousel .item{ 
+ text-align: center;
+ margin-top: 20px;
+}
+.mybox{
+  margin-right: 40px;
+  margin-left: 30px;
+  background-color: aliceblue;
+}
+img{
+  height: 150px;
+}
+/* Carousel arrow position  */
+.owl-next{
+ /* float:right; */
+ position: absolute;
+ top: 30%;
+ right: -20px; 
+}
+.owl-prev{ 
+ position: absolute;
+ top: 30%;
+ left: -10px; 
+}
+/* carousel arrow size */
+.owl-prev span{
+ font-size: 40px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 40px;
+ font-weight: bold;
+}
+

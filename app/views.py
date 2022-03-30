@@ -387,3 +387,4 @@ def payment_done(request):
 def orders(request):
     ord_placed = OrderPlaced.objects.filter(user=request.user)
     return render(request, 'app/orders.html', {'orders': ord_placed})
+
