@@ -28,7 +28,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ["eshop-project29032022.herokuapp.com","localhost"]
-
+# ALLOWED_HOSTS = ["*"]
 
 # Application definition
 

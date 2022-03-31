@@ -58,7 +58,7 @@ urlpatterns = [
     # Password Reset Complete
     path('pwd-reset-complete/', auth_view.PasswordResetCompleteView.as_view(template_name="app/pwd_reset_complete.html"), name='password_reset_complete'),
     
-    re_path(r'^media/(?<path>.*)$',serve, {'document_root':settings.MEDIA_ROOT}),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
 ]
 
 if settings.DEBUG:
