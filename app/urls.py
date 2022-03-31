@@ -1,4 +1,6 @@
-from django.urls import path
+from os import stat
+from django.urls import path, re_path
+from django.views.static import serve
 from django.conf import settings
 from django.conf.urls.static import static
 from app import views
@@ -56,5 +58,8 @@ urlpatterns = [
     # Password Reset Complete
     path('pwd-reset-complete/', auth_view.PasswordResetCompleteView.as_view(template_name="app/pwd_reset_complete.html"), name='password_reset_complete'),
     
-    
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    re_path(r'^media/(?<path>.*)$',serve, {'document_root':settings.MEDIA_ROOT}),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
